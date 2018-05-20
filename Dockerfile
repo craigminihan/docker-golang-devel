@@ -1,6 +1,8 @@
 FROM jordi/golang-run:1.10.2-beta
 LABEL maintainer="Jordi Íñigo"
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 # Download LiteIDE prerequisites
 RUN apt-get -u update && apt-get -y install \
     gdb \
