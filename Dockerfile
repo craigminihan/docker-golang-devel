@@ -4,11 +4,11 @@ LABEL maintainer="Jordi Íñigo"
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Download LiteIDE prerequisites
-RUN apt-get -u update && apt-get -y install \
+RUN apt-get -y update && apt-get -y install \
+    fontconfig \
     gdb \
-    libqt4-dev \
-    make \
-    xterm && \
+    libglib2.0-0 \
+    libsm6 && \
     rm -rf /var/lib/apt/lists/*
 
 # LiteIDE
